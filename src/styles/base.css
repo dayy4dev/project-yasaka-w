@@ -1,0 +1,69 @@
+:root {
+  --paper-bg: #f4f3f1;
+  --ink-primary: #1f1f1f;
+  --ink-secondary: #2b2b2b;
+  --crimson-accent: #ca2047;
+  --crimson-band: #c91c45;
+  --text-on-crimson: #ffffff;
+  --text-jp-on-crimson: #fce0e7;
+  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--crimson-band);
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-display);
+  color: var(--ink-primary);
+  background-color: var(--crimson-band);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  display: block;
+}
+
+a[href],
+button:not(:disabled),
+summary,
+select:not(:disabled),
+label[for],
+[role='button']:not([aria-disabled='true']) {
+  cursor: pointer;
+}
+
+button:disabled,
+select:disabled,
+[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink-primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
